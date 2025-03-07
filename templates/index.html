@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Think Tank Scraper</title>
+</head>
+<body>
+    <h1>Think Tank Scraper</h1>
+    {% for think_tank in think_tanks %}
+        <form method="post" action="/run_scraper">
+            <input type="hidden" name="think_tank" value="{{ think_tank }}">
+            <button type="submit">{{ think_tank }}</button>
+        </form>
+    {% endfor %}
+</body>
+</html>
